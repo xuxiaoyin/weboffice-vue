@@ -1,0 +1,180 @@
+/* DaTouWang URL: www.datouwang.com */
+/* 公共样式表css */
+html,body {
+    color: #333;
+    margin: 0;
+    height: 100%;
+    font-family: "Myriad Set Pro","Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+img {
+    border: 0;
+}
+
+body {
+    background: #F4F5F9;
+    color: #666;
+    font: 12px/150% Arial,Verdana, "microsoft yahei";
+}
+
+html, body, div, dl, dt, dd, ol, ul, li, h1, h2, h3, h4, h5, h6, p, blockquote, pre, button, fieldset, form, input, legend, textarea, th, td {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #08acee;
+}
+
+button {
+    outline: 0;
+}
+
+img {
+    border: 0;
+}
+
+button,input,optgroup,select,textarea {
+    margin: 0;
+    font: inherit;
+    color: inherit;
+    outline: none;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: #666;
+}
+
+a:hover {
+    color: #eee;
+}
+
+.clearfix::after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+.clearfix {
+}
+
+/* 必要布局样式css */
+.info-container {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.info-container-title {
+    font-size: 16px;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.info-container-title h2 {
+    font-weight: normal;
+    font-size: 36px;
+    font-family: pingfang,"Microsoft Yahei","HanHei SC",PingHei,"PingFang SC","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+}
+
+.info-container-list {
+    background: #fff;
+    padding: 42px 0;
+}
+
+.info-listItem {
+    width: 340px;
+    margin: 0 26px 0 32px;
+    float: left;
+}
+
+.info-listItem-title {
+    font-size: 24px;
+    margin-bottom: 26px;
+    font-weight: normal;
+}
+
+.info-more {
+    width: 100px;
+    height: 36px;
+    display: block;
+    line-height: 36px;
+    border: 1px solid #E4E4E4;
+    text-align: center;
+    transition: all .1s;
+}
+
+.info-more:hover {
+    background: #F96A69;
+    border-color: #F96A69;
+    color: #fff;
+}
+
+.info-listItem-list {
+    margin-bottom: 17px;
+}
+
+.info-listItem-list dt {
+    height: 180px;
+    position: relative;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.info-listItem-list dt a img {
+    width: 340px;
+    height: 180px;
+    transition: all .4s;
+}
+
+.info-listItem-list dt a span {
+    position: absolute;
+    left: 0;
+    right: 0;
+    color: #fff;
+    bottom: 10px;
+    font-size: 15px;
+    padding: 0 24px;
+    line-height: 1.5;
+    height: 44px;
+    overflow: hidden;
+    transition: all .2s;
+}
+
+.info-listItem-list dd {
+    margin-bottom: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.info-listItem-list dd a {
+    font-size: 14px;
+    color: #909499;
+}
+
+.info-listItem-list dd a:hover {
+    color: #ec6061;
+}
+
+.info-listItem-list dt a:hover img {
+    transform: scale(1.05);
+}

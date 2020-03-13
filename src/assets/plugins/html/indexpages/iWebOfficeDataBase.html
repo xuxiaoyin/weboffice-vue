@@ -1,0 +1,83 @@
+﻿<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>iWebOffice2015示例（数据库版）</title>
+		<link rel='stylesheet' type='text/css' href='../css/iWebProduct.css' />
+		<link rel='stylesheet' type='text/css' href='../css/style.css' />
+		<link rel='stylesheet' type='text/css' href='../css/style3.css' />
+		<script type="text/javascript" src="../js/WebOffice.js"></script>
+		<script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+		<script language="javascript">
+		    //自身浏览器打开
+		    function openfile(url) {
+		        var mhtmlHeight = window.screen.availHeight; //获得窗口的垂直位置;
+		        var mhtmlWidth = window.screen.availWidth; //获得窗口的水平位置; 
+		        var iTop = 0; //获得窗口的垂直位置;
+		        var iLeft = 0; //获得窗口的水平位置;
+		        window.open(url, 'iWebOffice2015智能文档中间件示例程序', 'height=' + mhtmlHeight + ',width=' + mhtmlWidth + ',top=' + iTop + ',left=' + iLeft + ',toolbar=no,menubar=yes,scrollbars=no,resizable=yes, location=no,status=no');
+		    }
+		</script>
+		
+	</head>
+	<body>
+	<div class="gtco-container">
+		<div id="mhead" class="mhead">
+			<table id="header">
+				<tr>
+					<td>
+						<img src="../css/logo.jpg" />
+					</td>
+					<td>
+						<span> iWebOffice2015集成使用示例V2（数据库版）</span> 
+					</td>
+				</tr>
+			</table>
+		</div>
+		
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2" >
+				<p>生成对应数据库配置文件在项目根目录，数据库配置文件里,Demo默认配置MySql数据库，如果需要其他数据库，请修改iDBManager2000.java配置对应数据库，由于不同数据库Sql写入也不一样，后台调用不同Sql只需再加载文档Load()方法设置相应参数如：WebOfficeObj.DataBase = "MYSQL"</p>
+			</div>
+		</div>
+		<div class="row">
+				<table class="zz-talbe">
+        	        <thead>
+            	        <tr>
+                	        <th style="width:40px;">类型 </th>
+                            <th style="width:500px;">功能示例</th>
+                            <th style="width:120px;">文件夹</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img src="../images/office-1.png"></td>
+                            <td>
+                                1、<a href="javascript:openfile('../samples/OpenAndSaveDataBase/OpenAndSave_Word.jsp');">Word打开保存，本地打开保存，前后台交互</a>
+                                <p>包含在线打开保存，本地打开保存，前后台交互。</p>
+                            </td>
+                            <td>/samples/OpenAndSaveDataBase/OpenAndSave_Word.jsp</td>
+                        </tr>
+                    
+                        <tr>
+                            <td><img src="../images/office-2.png"></td>
+                            <td>
+                                2、<a href="javascript:openfile('../samples/OpenAndSaveDataBase/OpenAndSave_Excel.jsp');">Excel打开保存，本地打开保存，前后台交互</a>
+                                <p>包含在线打开保存，本地打开保存，前后台交互。</p>
+                            </td>
+                            <td>/samples/OpenAndSaveDataBase/OpenAndSave_Excel.jsp</td>
+                        </tr>
+                        
+                        <tr>
+                	        <td><img src="../images/office-3.png"></td>
+                            <td>3、<a href="javascript:openfile('../samples/OpenAndSaveDataBase/OpenAndSave_PPT.jsp');">PPT打开保存，本地打开保存，前后台交互</a>
+                                <p>包含在线打开保存，本地打开保存，前后台交互。</p></td>
+                            <td>/samples/OpenAndSaveDataBase/OpenAndSave_PPT.jsp</td>
+                        </tr>
+                    </tbody>
+                </table>
+		</div>	
+	</div>	
+	</body>
+</html>

@@ -1,0 +1,104 @@
+CREATE TABLE [dbo].[BookMarks] (
+	[BookMarkID] [int] IDENTITY (1, 1) NOT NULL ,
+	[BookMarkName] [nvarchar] (64) NULL ,
+	[BookMarkDesc] [nvarchar] (128) NULL ,
+	[BookMarkText] [nvarchar] (200) NULL 
+) ON [PRIMARY]
+GO
+
+CREATE TABLE [dbo].[Document] (
+	[DocumentID] [int] IDENTITY (1, 1) NOT NULL ,
+	[RecordID] [varchar] (16) NULL ,
+	[Template] [varchar] (16) NULL ,
+	[Subject] [varchar] (254) NULL ,
+	[Author] [varchar] (64) NULL ,
+	[FileDate] [datetime] NULL ,
+	[FileType] [varchar] (50) NULL ,
+	[HtmlPath] [varchar] (128) NULL ,
+	[Status] [varchar] (4) NULL 
+) ON [PRIMARY]
+GO
+
+CREATE TABLE [dbo].[Document_File] (
+	[FileID] [int] IDENTITY (1, 1) NOT NULL ,
+	[RecordID] [varchar] (16) NULL ,
+	[FileName] [varchar] (254) NULL ,
+	[FileType] [varchar] (4) NULL ,
+	[FileSize] [int] NULL ,
+	[FileDate] [datetime] NULL ,
+	[FileBody] [image] NULL ,
+	[FilePath] [varchar] (128) NULL ,
+	[UserName] [varchar] (64) NULL ,
+	[Descript] [varchar] (255) NULL 
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+
+CREATE TABLE [dbo].[Version_File] (
+	[FileID] [int] IDENTITY (1, 1) NOT NULL ,
+	[RecordID] [varchar] (16) NULL ,
+	[FileName] [varchar] (254) NULL ,
+	[FileType] [varchar] (4) NULL ,
+	[FileSize] [int] NULL ,
+	[FileDate] [datetime] NULL ,
+	[FileBody] [image] NULL ,
+	[FilePath] [varchar] (128) NULL ,
+	[UserName] [varchar] (64) NULL ,
+	[Descript] [varchar] (255) NULL 
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+
+CREATE TABLE [dbo].[Document_Signature] (
+	[SignatureID] [int] IDENTITY (1, 1) NOT NULL ,
+	[RecordID] [varchar] (50) NULL ,
+	[MarkName] [varchar] (64) NULL ,
+	[UserName] [varchar] (64) NULL ,
+	[DateTime] [datetime] NULL ,
+	[HostName] [varchar] (50) NULL ,
+	[MarkGuid] [varchar] (128) NULL 
+) ON [PRIMARY]
+GO
+
+CREATE TABLE [dbo].[Signature] (
+	[SignatureID] [int] IDENTITY (1, 1) NOT NULL ,
+	[UserName] [varchar] (64) NULL ,
+	[PassWord] [varchar] (64) NULL ,
+	[MarkName] [varchar] (254) NULL ,
+	[MarkType] [varchar] (50) NULL ,
+	[MarkBody] [image] NULL ,
+	[MarkPath] [varchar] (128) NULL ,
+	[MarkSize] [int] NULL ,
+	[MarkDate] [datetime] NULL 
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+
+CREATE TABLE [dbo].[Template_File] (
+	[TemplateID] [int] IDENTITY (1, 1) NOT NULL ,
+	[RecordID] [varchar] (16) NOT NULL ,
+	[FileName] [varchar] (254) NULL ,
+	[FileType] [varchar] (50) NULL ,
+	[FileSize] [int] NULL ,
+	[FileDate] [datetime] NULL ,
+	[FileBody] [image] NULL ,
+	[FilePath] [varchar] (255) NULL ,
+	[UserName] [varchar] (64) NULL ,
+	[Descript] [varchar] (255) NULL 
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+
+CREATE TABLE [dbo].[Template_BookMarks] (
+	[BookMarkID] [int] IDENTITY (1, 1) NOT NULL ,
+	[RecordID] [varchar] (50) NULL ,
+	[BookMarkName] [varchar] (120) NULL 
+) ON [PRIMARY]
+GO
+
+Insert Into BookMarks (BookMarkName,BookMarkDesc,BookMarkText) values ('Caption','[请输入标题]','关于信息化建设的题案');
+Insert Into BookMarks (BookMarkName,BookMarkDesc,BookMarkText) values ('Type','[请输入类型]','科普');
+Insert Into BookMarks (BookMarkName,BookMarkDesc,BookMarkText) values ('Item','[请输入专题]','专题');
+Insert Into BookMarks (BookMarkName,BookMarkDesc,BookMarkText) values ('KeyWord','[请输入关键字]','电脑、拓扑');
+Insert Into BookMarks (BookMarkName,BookMarkDesc,BookMarkText) values ('Author','[请输入作者]','作者');
+Insert Into BookMarks (BookMarkName,BookMarkDesc,BookMarkText) values ('Sec','[公文密机]','绝密');
+Insert Into BookMarks (BookMarkName,BookMarkDesc,BookMarkText) values ('Subject','[公文主题词]','计算机、信息、网络');
+Insert Into BookMarks (BookMarkName,BookMarkDesc,BookMarkText) values ('Content','[公文内容]','公文内容：请详细填写');
+Insert Into BookMarks (BookMarkName,BookMarkDesc,BookMarkText) values ('Title','[公文标题]','江西省南昌市XXXX公文');
+Insert Into BookMarks (BookMarkName,BookMarkDesc,BookMarkText) values ('Description','[公文说明或描叙]','内部公文');

@@ -1,0 +1,96 @@
+CREATE TABLE Document(
+    DOCUMENTID NUMBER(10) NOT NULL, 
+    RECORDID VARCHAR2(16), 
+    TEMPLATE VARCHAR2(16), 
+    SUBJECT VARCHAR2(254), 
+    AUTHOR VARCHAR2(64), 
+    FILEDATE DATE, 
+    FILETYPE VARCHAR2(50), 
+    HTMLPATH VARCHAR2(128), 
+    STATUS VARCHAR2(4)); 
+
+CREATE TABLE Document_File(
+    FILEID NUMBER(10) NOT NULL, 
+    RECORDID VARCHAR2(16), 
+    FILENAME VARCHAR2(254), 
+    FILETYPE VARCHAR2(4), 
+    FILESIZE NUMBER(10), 
+    FILEDATE DATE, 
+    FILEBODY BLOB , 
+    FILEPATH VARCHAR2(128), 
+    USERNAME VARCHAR2(64), 
+    DESCRIPT VARCHAR2(255)); 
+
+CREATE TABLE Version_File(
+    FILEID NUMBER(10) NOT NULL, 
+    RECORDID VARCHAR2(16), 
+    FILENAME VARCHAR2(254), 
+    FILETYPE VARCHAR2(4), 
+    FILESIZE NUMBER(10), 
+    FILEDATE DATE, 
+    FILEBODY BLOB , 
+    FILEPATH VARCHAR2(128), 
+    USERNAME VARCHAR2(64), 
+    DESCRIPT VARCHAR2(255)); 
+
+CREATE TABLE BookMarks(
+    BOOKMARKID NUMBER(10) NOT NULL, 
+    BOOKMARKNAME VARCHAR2(64), 
+    BOOKMARKDESC VARCHAR2(128), 
+    BOOKMARKTEXT VARCHAR2(200)); 
+
+CREATE TABLE Document_Signature(
+    SIGNATUREID NUMBER(10) NOT NULL, 
+    RECORDID VARCHAR2(50), 
+    MARKNAME VARCHAR2(64), 
+    USERNAME VARCHAR2(64), 
+    DATETIME DATE, 
+    HOSTNAME VARCHAR2(50), 
+    MARKGUID VARCHAR2(128)); 
+
+CREATE TABLE Signature(
+    SIGNATUREID NUMBER(10) NOT NULL, 
+    USERNAME VARCHAR2(64), 
+    PASSWORD VARCHAR2(64), 
+    MARKNAME VARCHAR2(254), 
+    MARKTYPE VARCHAR2(50), 
+    MARKBODY BLOB , 
+    MARKPATH VARCHAR2(128), 
+    MARKSIZE NUMBER(10), 
+    MARKDATE DATE); 
+
+CREATE TABLE Template_File(
+    TEMPLATEID NUMBER(10) NOT NULL, 
+    RECORDID VARCHAR2(16) NOT NULL, 
+    FILENAME VARCHAR2(254), 
+    FILETYPE VARCHAR2(50), 
+    FILESIZE NUMBER(10), 
+    FILEDATE DATE, 
+    FILEBODY BLOB , 
+    FILEPATH VARCHAR2(255), 
+    USERNAME VARCHAR2(64), 
+    DESCRIPT VARCHAR2(255)); 
+
+CREATE TABLE Template_BookMarks(
+    BOOKMARKID NUMBER(10) NOT NULL, 
+    RECORDID VARCHAR2(50), 
+    BOOKMARKNAME VARCHAR2(120));
+
+CREATE SEQUENCE DocumentID
+MINVALUE 1
+MAXVALUE 99999999
+START WITH 1
+INCREMENT BY 1
+NOCACHE;
+
+Insert Into BookMarks (BookMarkID,BookMarkName,BookMarkDesc,BookMarkText) values (1,'Caption','[请输入标题]','关于信息化建设的题案');
+Insert Into BookMarks (BookMarkID,BookMarkName,BookMarkDesc,BookMarkText) values (2,'Type','[请输入类型]','科普');
+Insert Into BookMarks (BookMarkID,BookMarkName,BookMarkDesc,BookMarkText) values (3,'Item','[请输入专题]','专题');
+Insert Into BookMarks (BookMarkID,BookMarkName,BookMarkDesc,BookMarkText) values (4,'KeyWord','[请输入关键字]','电脑、拓扑');
+Insert Into BookMarks (BookMarkID,BookMarkName,BookMarkDesc,BookMarkText) values (5,'Author','[请输入作者]','作者');
+Insert Into BookMarks (BookMarkID,BookMarkName,BookMarkDesc,BookMarkText) values (6,'Sec','[公文密机]','绝密');
+Insert Into BookMarks (BookMarkID,BookMarkName,BookMarkDesc,BookMarkText) values (7,'Subject','[公文主题词]','计算机、信息、网络');
+Insert Into BookMarks (BookMarkID,BookMarkName,BookMarkDesc,BookMarkText) values (8,'Content','[公文内容]','公文内容：请详细填写');
+Insert Into BookMarks (BookMarkID,BookMarkName,BookMarkDesc,BookMarkText) values (9,'Title','[公文标题]','江西省南昌市XXXX公文');
+Insert Into BookMarks (BookMarkID,BookMarkName,BookMarkDesc,BookMarkText) values (10,'Description','[公文说明或描叙]','内部公文');
+commit;

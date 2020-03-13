@@ -1,0 +1,116 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	margin: 0px;
+	padding:0px;
+	list-style-type:none;
+}
+body{
+	font-family: 微软雅黑;
+}
+a,img{border:0;}
+a{
+	text-decoration: none;
+	color: #999999;
+	font-size: 12px;
+}
+img{
+	border: 0px solid #000;
+}
+
+/*主面板样式*/
+.container {
+	width:100%;
+	margin:0px auto;/*主面板DIV居中*/
+}
+
+.container .btn { /* 按钮美化 */
+	width: 80px; /* 宽度 */
+	height: 30px; /* 高度 */
+	border-width: 0px; /* 边框宽度 */
+	border-radius: 3px; /* 边框半径 */
+	background: #1E90FF; /* 背景颜色 */
+	cursor: pointer; /* 鼠标移入按钮范围时出现手势 */
+	outline: none; /* 不显示轮廓线 */
+	font-family: Microsoft YaHei; /* 设置字体 */
+	color: white; /* 字体颜色 */
+	font-size: 14px; /* 字体大小 */
+	margin-top: 20px;
+	margin-left: 40px;
+}
+
+.container .btn:hover { /* 鼠标移入按钮范围时改变颜色 */
+	background: #5599FF;
+}
+
+.container .btnn { /* 按钮美化 */
+	width: 80px; /* 宽度 */
+	height: 30px; /* 高度 */
+	border-width: 0px; /* 边框宽度 */
+	border-radius: 3px; /* 边框半径 */
+	background: #1E90FF; /* 背景颜色 */
+	cursor: pointer; /* 鼠标移入按钮范围时出现手势 */
+	outline: none; /* 不显示轮廓线 */
+	font-family: Microsoft YaHei; /* 设置字体 */
+	color: white; /* 字体颜色 */
+	font-size: 14px; /* 字体大小 */
+	margin-top:3px;
+	margin-left: 40px;
+}
+.container .btnn:hover { /* 鼠标移入按钮范围时改变颜色 */
+	background: #5599FF;
+}
+
+
+.container .h1{
+	color: #FFF;
+	font: 16px Open Sans;
+	padding-left: 50px;
+	padding-top: 30px;
+	margin:0px auto;
+}
+
+.container .input{
+	margin:20px 60px 0px 30px;
+	height: 260px;
+	/*border:1px #BBB solid;*/
+	background: #FFF;
+}
+
+.container .input2{
+	margin:20px 60px 0px 30px;
+	height: 180px;
+	/*border:1px #BBB solid;*/
+	background: #FFF;
+}
+
+.container .input .submit{
+	width: 80px; /* 宽度 */
+	height: 30px; /* 高度 */
+	border-width: 0px; /* 边框宽度 */
+	border-radius: 3px; /* 边框半径 */
+	background: #1E90FF; /* 背景颜色 */
+	cursor: pointer; /* 鼠标移入按钮范围时出现手势 */
+	outline: none; /* 不显示轮廓线 */
+	font-family: Microsoft YaHei; /* 设置字体 */
+	color: white; /* 字体颜色 */
+	font-size: 17px; /* 字体大小 */
+	margin-top: 20px;
+	margin-left: 40px;
+}
+
+.container .output{
+	margin:20px 60px 0px 30px;
+	height: 200px;
+	
+	background: #FFF;
+	/*border:1px #BBB solid;*/
+}
+
+.container .output2{
+	margin:20px 60px 0px 30px;
+	height: 240px;
+	
+	background: #FFF;
+	/*border:1px #BBB solid;*/
+}

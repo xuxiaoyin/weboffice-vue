@@ -1,0 +1,89 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	margin: 0px;
+	padding:0px;
+	list-style-type:none;
+}
+body{
+	font-family: 微软雅黑;
+}
+a,img{border:0;}
+a{
+	text-decoration: none;
+	color: #999999;
+	font-size: 12px;
+}
+img{
+	border: 0px solid #000;
+}
+
+/*sidebar开始*/
+.sidebar {
+	float:left;
+	width: 20%;
+	height:100%;
+	border:1px #F00 solid;
+  	background: #CCCCCC;
+  	border-right: 5px solid #777777;
+}
+.sidebar ul {
+  	margin-top: 30px;
+}
+.sidebar li {
+	color: #FFF;
+	list-style: none;
+	padding: 10px;
+	position: relative;
+}
+.sidebar a {
+	text-decoration: none;
+	color: #555;
+	font: 14px Open Sans;
+	text-transform: uppercase;
+	position: relative;
+	z-index: 1000;
+}
+.sidebar .hover {
+	display: block;
+	position: absolute;
+	
+	height: 40px;
+	top: 0px;
+	left: 0px;
+	background: #d00355;
+	z-index: 0;
+	opacity: 0;
+}
+.sidebar a:hover {
+  	color: #FFF;
+}
+.sidebar .fa-angle-right {
+	position: absolute;
+	left: 120px;
+	top: 1px;
+}
+.sidebar .sub-menu {
+	position: absolute;
+	left: 260px;
+	top: -30px;
+	padding: 0px;
+	width: 220px;
+	display: none;
+	/*background: url("http://themes.mediacreed.com/html/synergy/assets/patterns/menu/menu_pattern_1.png");*/
+	background: #AAAAAA;
+}
+.sidebar .sub-menu li a {
+	padding-left: 20px;
+	font-size: 13px;
+}
+.sidebar .sub-menu i {
+  	left: 160px;
+}
+.sidebar ul li:hover ul {
+  	display: block;
+}
+.sidebar .push {
+  	margin-right: 10px;
+}
+/*sidebar结束*/

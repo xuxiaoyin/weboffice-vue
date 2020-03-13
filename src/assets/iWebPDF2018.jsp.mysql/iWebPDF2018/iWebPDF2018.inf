@@ -1,0 +1,9 @@
+[version]
+signature="$CHICAGO$"
+AdvancedINF=2.0
+
+[Setup Hooks]
+hook1=hook1
+
+[hook1]
+run=%EXTRACT_DIR%\iWebPDF2018-x86.exe /S

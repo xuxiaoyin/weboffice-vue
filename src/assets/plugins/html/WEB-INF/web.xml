@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+    <display-name>OfficeServer</display-name>
+    <servlet-name>OfficeServer</servlet-name>
+    <servlet-class>Servlet.OfficeServer</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>OfficeServer</servlet-name>
+    <url-pattern>/OfficeServer</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <display-name>AJAXServer</display-name>
+    <servlet-name>AJAXServer</servlet-name>
+    <servlet-class>Servlet.AJAXServer</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AJAXServer</servlet-name>
+    <url-pattern>/AJAXServer</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <display-name>FileDownload</display-name>
+    <servlet-name>FileDownload</servlet-name>
+    <servlet-class>Servlet.FileDownload</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FileDownload</servlet-name>
+    <url-pattern>/FileDownload</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <display-name>AJAX</display-name>
+    <servlet-name>AJAX</servlet-name>
+    <servlet-class>Servlet.AJAX</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AJAX</servlet-name>
+    <url-pattern>/AJAX</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>wordToIMGServlet</servlet-name>
+    <servlet-class>com.kinggrid.office.demo.servlet.WordToIMGServlet</servlet-class>
+  </servlet>
+   <servlet-mapping>
+    <servlet-name>wordToIMGServlet</servlet-name>
+    <url-pattern>/word/img</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>WordToPDFServlet</servlet-name>
+    <servlet-class>com.kinggrid.office.demo.servlet.WordToPDFServlet</servlet-class>
+  </servlet>
+   <servlet-mapping>
+    <servlet-name>WordToPDFServlet</servlet-name>
+    <url-pattern>/word/Pdf</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <servlet-name>WordToWordServlet</servlet-name>
+    <servlet-class>com.kinggrid.office.demo.servlet.WordToWordServlet</servlet-class>
+  </servlet>
+   <servlet-mapping>
+    <servlet-name>WordToWordServlet</servlet-name>
+    <url-pattern>/PreviewWord/word</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>CellToHTMLServlet</servlet-name>
+    <servlet-class>com.kinggrid.office.demo.servlet.CellToHTMLServlet</servlet-class>
+  </servlet>
+   <servlet-mapping>
+    <servlet-name>CellToHTMLServlet</servlet-name>
+    <url-pattern>/excel/html</url-pattern>
+  </servlet-mapping>
+  
+  
+  <listener>
+    <listener-class>
+      com.kinggrid.office.demo.model.GreyClientInitListener
+    </listener-class>
+  </listener>
+  
+</web-app>

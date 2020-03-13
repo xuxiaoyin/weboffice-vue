@@ -1,0 +1,277 @@
+﻿<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>iWebOffice2015示例（无数据库版）</title>
+		<link rel='stylesheet' type='text/css' href='../css/iWebProduct.css' />
+		<link rel='stylesheet' type='text/css' href='../css/style.css' />
+		<link rel='stylesheet' type='text/css' href='../css/style3.css' />
+		<script type="text/javascript" src="../js/WebOffice.js"></script>
+		<script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+		
+		<script type="text/javascript">
+			var KGBrowser = new KGBrowser();
+		</script>
+		<script language="javascript">
+
+		    //自身浏览器打开
+		    function openfile(url) {
+		        var mhtmlHeight = window.screen.availHeight; //获得窗口的垂直位置;
+		        var mhtmlWidth = window.screen.availWidth; //获得窗口的水平位置; 
+		        var iTop = 0; //获得窗口的垂直位置;
+		        var iLeft = 0; //获得窗口的水平位置;
+		        window.open(url, 'iWebOffice2015智能文档中间件示例程序', 'height=' + mhtmlHeight + ',width=' + mhtmlWidth + ',top=' + iTop + ',left=' + iLeft + ',toolbar=no,menubar=yes,scrollbars=yes,resizable=no, location=yes,status=yes');
+		    }
+		</script>
+	</head>
+	<body>
+	<div class="gtco-container">
+		<div id="mhead" class="mhead">
+			<table id="header">
+				<tr>
+					<td>
+						<img src="../css/logo.jpg" />
+					</td>
+					<td>
+						<span> iWebOffice2015集成使用示例V2（无数据库版）</span> 
+					</td>
+				</tr>
+			</table>
+		</div>
+		
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2" >
+				<p><font style="font-weight: bold; font-size: 18px" >常用功能</br></font>注：支持IE8-IE11、谷歌Chrome30以上、Firefox52以下版本、360极速浏览器、360安全浏览器<font color=red>（建议使用极速模式）</font>等主流浏览器；<font color=red>如初次安装iWebOffice2015控件，请安装完后，重新启动浏览器后再进行使用。</font></p>
+			</div>
+		</div>
+		<div class="row">
+				<table class="zz-talbe">
+        	        <thead>
+            	        <tr>
+                	        <th style="width:40px;">类型 </th>
+                            <th style="width:500px;">功能示例</th>
+                            <th style="width:120px;">文件夹</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img src="../images/office-1.png"></td>
+                            <td>
+                                1、<a href="javascript:openfile('../samples/OpenAndSave/OpenAndSave_Word.jsp');">Word打开保存，本地打开保存，前后台交互</a>
+                                <p>包含URL，金格MultiPart，服务端Servlet方式打开文档，保存，本地打开保存，前后台交互。</p>
+                            </td>
+                            <td>/samples/OpenAndSave/OpenAndSave_Word.jsp</td>
+                        </tr>
+                    
+                        <tr>
+                            <td><img src="../images/office-2.png"></td>
+                            <td>
+                                2、<a href="javascript:openfile('../samples/OpenAndSave/OpenAndSave_Excel.jsp');">Excel打开保存，本地打开保存，前后台交互</a>
+                                <p>包含URL，金格MultiPart，服务端Servlet方式打开文档，保存，本地打开保存，前后台交互。</p>
+                            </td>
+                            <td>/samples/OpenAndSave/OpenAndSave_Excel.jsp</td>
+                        </tr>
+                        
+                        <tr>
+                	        <td><img src="../images/office-3.png"></td>
+                            <td>3、<a href="javascript:openfile('../samples/OpenAndSave/OpenAndSave_PPT.jsp');">PPT打开保存，本地打开保存，前后台交互</a>
+                                <p>包含URL，金格MultiPart，服务端Servlet方式打开文档，保存，本地打开保存，前后台交互。</p></td>
+                            <td>/samples/OpenAndSave/OpenAndSave_PPT.jsp</td>
+                        </tr>
+                        
+                        <tr>
+                	        <td><img src="../images/office-1.png"></td>
+                            <td>4、<a href="javascript:openfile('../samples/WebOfficeUI/WebOfficeUI.jsp');">控件UI</a>
+                                <p>包含皮肤设置，菜单栏以及工具栏设置。</p></td>
+                            <td>/samples/WebOfficeUI/WebOfficeUI.jsp</td>
+                        </tr>
+                        
+                        
+            	        <tr>
+                	        <td><img src="../images/office-1.png"></td>
+                            <td>5、<a href="javascript:openfile('../samples/TemplateTaoHong/TemplateTaoHong.jsp');">书签套红</a>
+                                <p>包含模板套红，书签功能，插入远程图片，清理底纹</p></td>
+                            <td>/samples/TemplateTaoHong/TemplateTaoHong.jsp</td>
+                        </tr>
+                        
+                        
+                        <tr>
+                	        <td><img src="../images/office-1.png"></td>
+                            <td>6、<a href="javascript:openfile('../samples/ContentDocument/ContentDocument.jsp');">文档内容操作</a>
+                                <p>包含插入页眉页脚，文档页数，清理文档中的链接，和痕迹相关操作。</p></td>
+                            <td>/samples/ContentDocument/ContentDocument.jsp</td>
+                        </tr>
+                        
+                        <tr>
+                	        <td><img src="../images/office-1.png"></td>
+                            <td>7、<a href="javascript:openfile('../samples/WordPermissions/WordPermissions.jsp');">文档防护</a>
+                                <p>包含文档锁定解锁，区域保护，拷贝控制，添加水印。</p></td>
+                            <td>/samples/WordPermissions/WordPermissions.jsp</td>
+                        </tr>
+                        
+                        <tr>
+                	        <td><img src="../images/office-1.png"></td>
+                            <td>8、<a href="javascript:openfile('../samples/WebSavePdf/WebSavePdf.jsp');">文档转换</a>
+                                <p>另存PDF。</p></td>
+                            <td>/samples/WebSavePdf/WebSavePdf.jsp</td>
+                        </tr>
+                        
+                        
+                        <tr>
+                	        <td><img src="../images/office-1.png"></td>
+                            <td>9、<a href="javascript:openfile('../samples/OfficeUI/OfficeUI.jsp');">OfficeUI</a>
+                                <p>包含word工具栏设置是否可见，状态栏设置是否可见，快速工具栏按钮设置是否可用，word选项卡RibbonUI控制，设置段落和文字参数。</p></td>
+                            <td>/samples/OfficeUI/OfficeUI.jsp</td>
+                        </tr>
+                    </tbody>
+                </table>
+		</div>	
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2" >
+				<p><font style="font-weight: bold; font-size: 18px" >多浏览器支持（弹出窗口模式）</font></br>
+       			 注：支持IE8-IE11、谷歌Chrome所有版本、Firefox所有版本、360极速浏览器、360安全浏览器、搜狗浏览器、QQ浏览器等主流浏览器。</p>
+			</div>
+		</div>
+		<div class="row">
+				<table class="zz-talbe">
+        	        <thead>
+            	        <tr>
+                	        <th style="width:40px;">类型 </th>
+                            <th style="width:500px;">功能示例</th>
+                            <th style="width:120px;">文件夹</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img src="../images/office-1.png"></td>
+                            <td>
+                                1、<a href="javascript:KGBrowser.openWindow('samples/KGBrowser/OpenAndSave/KGBrowser_Word.jsp','$skin=1$tabshow=1', false);">弹出窗口的方式在线打开文档Word</a>
+                                <p>演示弹出窗口的方式打开保存文档</p>
+                            </td>
+                            <td>/samples/KGBrowser/OpenAndSave/KGBrowser_Word.jsp</td>
+                        </tr>
+                        <tr>
+                            <td><img src="../images/office-1.png"></td>
+                            <td>
+                                2、<a href="javascript:openfile('../samples/KGBrowser/Comms/index.jsp')">弹出窗口的信息交换</a>
+                                <p>演示弹出窗口的信息交换</p>
+                            </td>
+                            <td>/samples/KGBrowser/Comms/index.jsp</td>
+                        </tr>
+                        <tr>
+                            <td><img src="../images/office-1.png"></td>
+                            <td>
+                                3、<a href="javascript:openfile('../samples/KGBrowser/SendMsg/parent.html')">KGBrowser页面回传信息给父页面</a>
+                                <p>演示KGBrowser页面回传信息给父页面</p>
+                            </td>
+                            <td>/samples/KGBrowser/SendMsg/parent.html</td>
+                        </tr>
+                    </tbody>
+                </table>
+		</div>	
+<!-- 		<div class="row"> -->
+<!-- 			<div class="col-md-8 col-md-offset-2" > -->
+<!-- 				<p><font style="font-weight: bold; font-size: 18px" >PDF文档操作</font></br> 注：此方式需要配合安装iWebPDF2018插件才能打开<a style="color: blue ;" href="../iWebPDF2018.exe">（此处提供iWebPDF2018安装包）</a></font></p> -->
+<!-- 			</div> -->
+<!-- 		</div> -->
+		
+<!-- 		<div class="row"> -->
+<!-- 				<table class="zz-talbe"> -->
+<!--         	        <thead> -->
+<!--             	        <tr> -->
+<!--                 	        <th style="width:40px;">类型 </th> -->
+<!--                             <th style="width:500px;">功能示例</th> -->
+<!--                             <th style="width:120px;">文件夹</th> -->
+<!--                         </tr> -->
+<!--                     </thead> -->
+<!--                     <tbody> -->
+<!--                         <tr> -->
+<!--                             <td><img src="../images/office-5.png"></td> -->
+<!--                             <td> -->
+<!--                                 1、<a href="javascript:openfile('../samples/OpenAndSave/OpenAndSave_PDF.jsp');">PDF打开保存，本地打开保存，前后台交互</a> -->
+<!--                                 <p>包含URL，金格MultiPart，服务端Servlet方式打开文档，保存，本地打开保存，前后台交互。</p> -->
+<!--                             </td> -->
+<!--                             <td>/samples/OpenAndSave/OpenAndSave_PDF.jsp</td> -->
+<!--                         </tr> -->
+                        
+<!--                         <tr> -->
+<!--                             <td><img src="../images/office-5.png"></td> -->
+<!--                             <td> -->
+<!--                                 2、<a href="javascript:openfile('../samples/WebPdfDocument/WebPdfDocument.jsp');">PDF功能</a> -->
+<!--                                 <p>包含PDF所有功能页面。</p> -->
+<!--                             </td> -->
+<!--                             <td>/samples/WebPdfDocument/WebPdfDocument.jsp</td> -->
+<!--                         </tr> -->
+                        
+                      <!--   <tr>
+                            <td><img src="../images/office-5.png"></td>
+                            <td>
+                                3、<a href="javascript:openfile('../samples/OpenAndSave/OpenAndSave_OFD.jsp');">OFD打开保存，本地打开保存，前后台交互</a>
+                                <p>包含URL，金格MultiPart，服务端Servlet方式打开文档，保存，本地打开保存，前后台交互。</p>
+                            </td>
+                            <td>/samples/OpenAndSave/OpenAndSave_OFD.jsp</td>
+                        </tr> -->
+<!--                     </tbody> -->
+<!--                 </table> -->
+<!-- 		</div>	 -->
+		
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2" >
+				<p><font style="font-weight: bold; font-size: 18px" >云预览</font><br/> 注：不使用iWebOffice2015插件对文档进行直接操作<br/><font color=red >服务器需有文档对应字体，如有些特殊格式或字体的文档不保证转换后格式的一致。 (此方式需要JDK1.6以上)</font>
+			</div>
+		</div>
+		<div class="row">
+				<table class="zz-talbe">
+        	        <thead>
+            	        <tr>
+                	        <th style="width:40px;">类型 </th>
+                            <th style="width:500px;">功能示例</th>
+                            <th style="width:120px;">文件夹</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img src="../images/office-1.png"></td>
+                            <td>
+                                1、<a href="javascript:openfile('../samples/PreviewImage/Image.jsp?fileName=ImageWord&fileType=.doc');">Word转Image在线预览</a>
+                                <p>把服务器里Word文档在后台转换IMAGE图片，通过获取图片路径在浏览器上进行预览。</p>
+                            </td>
+                            <td>/samples/PreviewImage/Image.jsp</td>
+                        </tr>
+                        
+                        
+<!--                         <tr> -->
+<!--                             <td><img src="../images/office-1.png"></td> -->
+<!--                             <td> -->
+<!--                             	配置Servlet拦截地址直接进入后台数据处理 -->
+<!--                                 2、<a href="javascript:openfile('../samples/PreviewWord/WebOffice_Word.jsp?fileName=sample&fileType=.doc');">Word文档操作</a> -->
+<!--                                 <p>先用插件打开服务器上原始文档，然后通过里面的服务器处理按钮跳转后台进制书签填充和水印，然后通过插件查看效果</p> -->
+<!--                             </td> -->
+<!--                             <td>/samples/PreviewWord/WebOffice_Word.jsp</td> -->
+<!--                         </tr> -->
+                        
+                        <tr>
+                            <td><img src="../images/office-2.png"></td>
+                            <td>
+                                3、<a href="javascript:openfile('../samples/PreviewHtml/Html.jsp?fileName=sample&fileType=.xlsx');">Excel转Html功能</a>
+                                <p>把服务器里Excel文档在后台转换Html格式，通过获取图片路径在浏览器上进行预览。</p>
+                            </td>
+                            <td>/samples//PreviewHtml/Html.jsp</td>
+                        </tr>
+                        
+                       <!--  <tr>
+                            <td><img src="../images/office-1.png"></td>
+                            <td>
+                                2、<a href="javascript:openfile('../samples/PreviewPDF/Pdf.jsp?fileName=sample&fileType=.doc');">Word转PDF功能</a>
+                                <p>把服务器的里Word文档在后台转换PDF文档，通过获取PDF文件路径可以下载到客户端。</p>
+                            </td>
+                            <td>/samples/PreviewPDF/Pdf.jsp</td>
+                        </tr> -->
+                    </tbody>
+                </table>
+		</div>
+		
+	</div>	
+	</body>
+</html>

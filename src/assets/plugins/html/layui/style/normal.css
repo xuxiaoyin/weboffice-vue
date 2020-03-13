@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+.div-bg{
+	background-color: #B9B9B9;
+	border: 1px solid #B9B9B9;
+	width: 90%;
+	height: 100%;
+	margin: 1cm auto;
+	text-align: center;
+}
+
+.imgpage
+{
+    width: 210mm;
+	min-height: 297mm;
+	margin: 1cm auto 0;
+	border: 1px #D3D3D3 solid;
+	background: white;
+	text-align: center;
+}
+
+.imgpage_landscape{
+	width: 297mm;
+	min-height: 210mm;
+	margin: 1cm auto 0;
+	border: 1px #D3D3D3 solid;
+	background: white;
+	text-align: center;
+}

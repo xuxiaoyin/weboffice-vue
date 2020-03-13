@@ -1,0 +1,39 @@
+ul.imglist{ 
+	margin:0 auto; 
+	width:100%; 
+	overflow:hidden
+	padding:5px 30px 0px 10px;
+	float:left; 
+}
+
+ul.imglist li{ 
+	float:left; 
+	margin:5px 50px 50px 50px; 
+	list-style-type:none;
+	background:#fff;
+	list-style:none;
+} 
+
+ul.imglist li img{ 
+	display:block; 
+	width:240px; 
+	height:150px
+} 
+
+ul.imglist li strong{
+	display:block; 
+	margin-top:20px;
+	margin-left:20px;
+	color:#000;
+} 
+
+ul.imglist li span{ 
+	display:block; 
+	width:200px; 
+	font-size: 14px;
+	color:#a4a4a4;
+	margin:10px 20px 30px 20px;
+	/*line-height:30px; 
+	background:#F6F6F6*/
+	background:#fff;
+} 

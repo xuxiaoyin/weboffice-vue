@@ -1,0 +1,28 @@
+
+
+金格许可软件版本号：V5.0
+
+金格科技iWebOffice2015许可信息[演示版_KJ=30,32,36,38,60]
+-----------------------------------------------------------------------------
+
+客户名：金格科技iWebOffice2015智能文档中间件[演示版]
+
+版本号：iWebOffice2015 V12.1.0.288 或更高版本适配
+
+许可号：
+
+	"金格科技iWebOffice2015智能文档中间件[演示版];V5.0S0xGAAEAAAAAAAAAEAAAAJgBAACgAQAALAAAAIWn3VJ3L1Xg41FVPifR0C1loqUNUsgPFzc+E3YSMVUm7h2L8qmC3BeJTL0GxQJW9AdMrrFVvJeQ5oQMNLYexUw1BrQIcHbNzVe7zOqDA/LUe5bLivMurPHWklKcCS2r7E4cvNCOQ8fOqE5SkT3/wzOF5HWbc1dNMOjDbsIKcrAbLO3fv5eVVsnUoz2gx/aP6SBoqFoCcPxY/d50ECoib5LbFVsUnG+97dTLHz3L92jAlcJauty/qxVTN5DbmAUzWlQeyJIfLdrwReIXDq7kCUEZ76gzel2cNlvrto34TNgFm8eZurtMKK3Phv+9JL0bNtkbJxWBCC0FUwU4Rjj72zv9GikiVHoJqMR3NP5slIkzaBDhKZCy/em1v4Hbg7kB3PtMn/CEM1U9MHQ/I+rGLbBoES+CIiVTve11LU7J4ygGuBzYe0LEgiyHDzTqocCMidzOb1d5KS7V/OlP72WONx7OWm5hhAeLJs1+I6lmRhTre/wh9CUuPLGaLkg3qiAMyp+PnbR+QZPETwI2FuuOpNmZIsKbYEjAnR6nm99gAcvDylSHQeQ5XJqi8IJb59ps8w=="
+
+
+日  期：14:08 2019-11-27
+
+说  明：本许可为试用，截止2020年3月。
+
+注  意：拷贝许可号时，必须原始数据，不能多或少，也不能修改，否则将无法生成正确许可。
+
+
+
+
+
+                                 金格科技
+                             www.kinggrid.com

@@ -21,12 +21,14 @@
       firstDay="1"
       weekNumberCalculation="ISO" 
       :buttonText="buttonText"
-      @dateClick="handleDateClick"
       :droppable="true"
       :editable="true"
       :selectable="true"
+      :navLinks="navLinks"
       @select="daySelect"
+      @dateClick="handleDateClick"
       />
+      <add-event ref="addEvent" :title="title"></add-event>
   </div>
 </template>
 
@@ -36,9 +38,11 @@ import dayGridPlugin from '@fullcalendar/daygrid'
 import timeGridPlugin from '@fullcalendar/timegrid'
 import interactionPlugin from '@fullcalendar/interaction'
 import listPlugin from '@fullcalendar/list';
+import AddEvent from './components/AddEvent'
 export default {
   components: {
-    FullCalendar // make the <FullCalendar> tag available
+    FullCalendar, // make the <FullCalendar> tag available
+    AddEvent
   },
   data: function() {
     return {
@@ -50,7 +54,7 @@ export default {
       ],
       calendarWeekends: true,
       calendarEvents: [ // initial event data
-        { title: 'Event Now', start: new Date() }
+        { id: 1, title: 'Event Now', start: '2020-03-16', end: '2020-03-18' }
       ],
       buttonText: {
         prev: '上月', // ‹
@@ -62,7 +66,9 @@ export default {
         week: '周',
         day: '天',
         list: '列表'
-      }
+      },
+      navLinks: true, // 允许天/周名称是否可点击，包括周次weekNumber，点击之后可以跳转到对于的天/周视图
+      title: ''
     }
   },
   methods: {
@@ -74,16 +80,12 @@ export default {
       calendarApi.gotoDate('2000-01-01') // call a method on the Calendar object
     },
     handleDateClick(arg) {
-      if (confirm('Would you like to add an event to ' + arg.dateStr + ' ?')) {
-        this.calendarEvents.push({ // add new event data
-          title: 'New Event',
-          start: arg.date,
-          allDay: arg.allDay
-        })
-      }
+      this.title = '新增事件'
+      this.$refs.addEvent.show()
     },
     daySelect(arg) {
-      console.log(arg)
+      // console.log(this.calendarEvents)
+      // console.log(arg)
     }
   }
 }

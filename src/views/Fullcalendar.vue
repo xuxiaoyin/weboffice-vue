@@ -81,6 +81,7 @@ export default {
     },
     handleDateClick(arg) {
       this.title = '新增事件'
+      console.log(arg)
       this.$refs.addEvent.show()
     },
     daySelect(arg) {

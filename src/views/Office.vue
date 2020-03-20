@@ -17,7 +17,6 @@
 		<!-- </div>
     </div> -->
     <div v-if="!WebOfficeObj">正在加载中……</div>
-    <div id="office"></div>
   </div>
 </template>
 <script>

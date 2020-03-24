@@ -34,6 +34,27 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "fullcalendar" */ '../views/Fullcalendar.vue')
   },
+  {
+    path: '/pdf',
+    name: 'Pdf',
+    component: () => import(/* webpackChunkName: "pdf" */ '../views/Pdf.vue')
+  },
+  // ProjectList
+  {
+    path: '/projectList',
+    name: 'ProjectList',
+    component: () => import(/* webpackChunkName: "projectList" */ '../views/ProjectList.vue')
+  },
+  {
+    path: '/rights',
+    name: 'Rights',
+    component: () => import(/* webpackChunkName: "projectList" */ '../views/Rights.vue')
+  },
+  {
+    path: '/rightsCopy',
+    name: 'RightsCopy',
+    component: () => import(/* webpackChunkName: "projectList" */ '../views/RightsCopy.vue')
+  },
 ]
 
 const router = new VueRouter({

@@ -28,7 +28,7 @@
       @select="daySelect"
       @dateClick="handleDateClick"
       />
-      <add-event ref="addEvent" :title="title"></add-event>
+      <add-event ref="addEvent" :current="current" :title="title" @sureAdd="sureAdd"></add-event>
   </div>
 </template>
 
@@ -54,7 +54,11 @@ export default {
       ],
       calendarWeekends: true,
       calendarEvents: [ // initial event data
-        { id: 1, title: 'Event Now', start: '2020-03-16', end: '2020-03-18' }
+        { id: 1, title: '测试', start: '2020-03-16', end: '2020-03-18', allDay: true },
+        { id: 2, title: '测试1', start: '2020-03-15', allDay: true },
+        { id: 3, title: '测试1', start: '2020-03-14', allDay: true },
+        { id: 4, title: '测试1', start: '2020-03-24', allDay: true },
+        { title: 'My Event', start: '2020-03-01', description: 'This is a cool event', allDay: true }
       ],
       buttonText: {
         prev: '上月', // ‹
@@ -65,10 +69,11 @@ export default {
         month: '月',
         week: '周',
         day: '天',
-        list: '列表'
+        list: '事件列表'
       },
       navLinks: true, // 允许天/周名称是否可点击，包括周次weekNumber，点击之后可以跳转到对于的天/周视图
-      title: ''
+      title: '',
+      current: {}
     }
   },
   methods: {
@@ -87,6 +92,9 @@ export default {
     daySelect(arg) {
       // console.log(this.calendarEvents)
       // console.log(arg)
+    },
+    sureAdd(form) {
+      this.calendarEvents.push(form)
     }
   }
 }

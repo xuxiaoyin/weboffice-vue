@@ -1,6 +1,11 @@
 
 <template>
   <div class="word-wrap">
+    <div class="btnWrap">
+      <el-button type="primary" size="small" @click="SaveDocument">保存到服务器</el-button>
+      <el-button type="primary" size="small">另存到服务器并替换原来版本</el-button>
+      <el-button type="primary" size="small" @click="WebSaveLocal">保存到本地</el-button>
+    </div>
     <!-- <div class="btnWrap">
       <button @click="WebOpenLocal">打开本地文件</button>
       <div style="width: 100%;"> -->
@@ -17,6 +22,7 @@
 		<!-- </div>
     </div> -->
     <div v-if="!WebOfficeObj">正在加载中……</div>
+    <div id="office"></div>
   </div>
 </template>
 <script>
@@ -38,10 +44,11 @@ export default {
     
   },
   mounted() {
-    if (this.$route.params.currentRow) {
-      this.url = this.$route.params.currentRow.url
-      this.name = this.$route.params.currentRow.name
-      let arr = this.$route.params.currentRow.name.split('.')
+    if (this.$route.query.currentRow) {
+      let params = JSON.parse(this.$Base64.decode(this.$route.query.currentRow))
+      this.url = params.url
+      this.name = params.name
+      let arr = params.name.split('.')
       this.type = arr[arr.length - 1]
     }
     this.$nextTick(() => {
@@ -54,7 +61,6 @@ export default {
         }
       })
     });
-    console.log(this.$route.params)
   },
   beforeDestroy() {},
   methods: {
@@ -73,7 +79,7 @@ export default {
     initWebOffice() {
       const newnode = document.createElement("div");
       newnode.innerHTML = webOfficeTpl;
-      newnode.style.height='400px'
+      newnode.style.height= document.documentElement.clientHeight - 120 + 'px'
       document.getElementById("office").appendChild(newnode);
       // this.webOffice = new Vue({
       //   render: h => h(webOfficeTpl)
@@ -88,7 +94,7 @@ export default {
         this.WebOfficeObj.UserName = "演示人";
         // this.WebOfficeObj.FileName = "sample.doc";
         // this.WebOfficeObj.FileType = ".doc"; //FileType:文档类型  .doc  .xls
-        this.WebOfficeObj.FileName = `sample.${this.type}`;
+        this.WebOfficeObj.FileName = this.name;
 		    this.WebOfficeObj.FileType = `.${this.type}`; 
         this.WebOfficeObj.ShowWindow = true; //true显示进度条//false隐藏进度条
         this.WebOfficeObj.obj.Style.ShowOpenProgress = true; //开启、关闭打开文档时的进度条
@@ -160,8 +166,8 @@ export default {
 
     //保存文档
     SaveDocument() {
-      this.WebOfficeObj.FileName = "sample.doc";
-      this.WebOfficeObj.FileType = ".doc";
+      this.WebOfficeObj.FileName = this.name;
+      this.WebOfficeObj.FileType = `.${this.type}`; 
       if (this.WebOfficeObj.WebSave()) {
         //交互OfficeServer的OPTION="SAVEFILE"
         this.WebOfficeObj.WebClose();
@@ -209,4 +215,8 @@ export default {
   width: 100%;
   height: 800px;
 } */
+.btnWrap {
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
 </style>

@@ -51,7 +51,8 @@ function(){
 	function WebOpen()
 	{   	
         if (iWebPDF2018.iWebPDFFun) {
-            var addin = iWebPDF2018.iWebPDFFun;
+						var addin = iWebPDF2018.iWebPDFFun;
+						console.log(addin)
             addin.Copyright = ""  					//设置授权码
             addin.WebUrl = url + "PDFServer.jsp";
             addin.RECORDID = mRecordID;
@@ -156,6 +157,7 @@ function(){
 
   //打开本地文档 		   
   $("#openLocalFile").click(function(){
+		console.log(123)
 	 try{
 		var addin = iWebPDF2018.iWebPDFFun;
 		addin.WebOpenLocal();

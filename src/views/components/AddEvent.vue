@@ -43,7 +43,7 @@
     <span slot="footer" class="dialog-footer">
       <el-button type="warning" size="small" style="float: left;" v-if="title === '编辑事件'">删 除</el-button>
       <el-button @click="dialogVisible = false" size="small">取 消</el-button>
-      <el-button type="primary" @click="dialogVisible = false" size="small">确 定</el-button>
+      <el-button type="primary" @click="sureAdd" size="small">确 定</el-button>
     </span>
   </el-dialog>
 </template>
@@ -98,6 +98,10 @@ export default {
       this.$nextTick(() => {
         this.dialogVisible = true
       })
+    },
+    sureAdd() {
+      this.dialogVisible = false
+      this.$emit('sureAdd', this.form)
     }
   },
 }

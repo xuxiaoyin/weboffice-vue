@@ -37,8 +37,9 @@ export default {
   },
   methods: {
     roleChange(val) {
-      this.$emit('roleChange')
       console.log(val)
+      console.log(this.$parent)
+      this.$parent.$emit('roleChange', val, this.checkList.includes(val))
     }
   },
 }

@@ -1,17 +1,28 @@
  <template>
-    <el-table :data="tableData" style="width: 100%">
-      <el-table-column prop="name" label="文件名"> </el-table-column>
-      <el-table-column align="center" width="100">
-        <template slot-scope="scope">
-          <el-button type="text" size="mini" @click="eiteOnline(scope.row)" v-if="scope.row.name && scope.row.name.split('.')[scope.row.name.split('.').length-1]!== 'pdf'">在线编辑</el-button>
-          <el-button type="text" size="mini" @click="openFile(scope.row)" v-else>打开</el-button>
-        </template>
-      </el-table-column>
-    </el-table>
+    <el-row :gutter="20">
+      <el-col :span="6">
+        <div>
+          <catalogue-tree></catalogue-tree>
+        </div>
+      </el-col>
+      <el-col :span="18">
+        <el-table :data="tableData" style="width: 100%">
+          <el-table-column prop="name" label="文件名"> </el-table-column>
+          <el-table-column align="center" width="100">
+            <template slot-scope="scope">
+              <el-button type="text" size="mini" @click="eiteOnline(scope.row)" v-if="scope.row.name && scope.row.name.split('.')[scope.row.name.split('.').length-1]!== 'pdf'">在线编辑</el-button>
+              <el-button type="text" size="mini" @click="openFile(scope.row)" v-else>打开</el-button>
+            </template>
+          </el-table-column>
+        </el-table>
+      </el-col>
+    </el-row>
   </template>
 
   <script>
+    import CatalogueTree from './components/CatalogueTree'
     export default {
+      components: { CatalogueTree },
       data() {
         return {
           tableData: [

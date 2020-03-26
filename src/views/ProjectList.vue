@@ -10,11 +10,14 @@
         </template>
       </el-table-column>
     </el-table>
+    <rights-dia ref="rightsDia"></rights-dia>
   </div>
 </template>
 
 <script>
+import RightsDia from './components/RightsDia'
 export default {
+  components: { RightsDia },
   data() {
     return {
       tableData: [
@@ -30,7 +33,7 @@ export default {
   },
   methods: {
     setRight(row) {
-      
+      this.$refs.rightsDia.show()
     }
   },
 }
